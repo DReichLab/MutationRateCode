@@ -1,0 +1,21 @@
+
+The .m files provided here are the main components used in the mutation rate estimation procedure described in "Calibrating the Human Mutation Rate via Ancestral Recombination Density in Diploid Genomes" (Lipson et al., 2015).  An outline of the procedure is as follows:
+
+1.  Preliminaries
+a.  Define starting regions (evenly_spaced_blocks.m)
+b.  Implement map prior (scale_Eur_map.m)
+c.  Create perturbed map (generate_gamma_map.m)
+d.  Prepare filter file (preprocess_bad_blocks.m)
+e.  Count CpGs (CpG_count_clean.m)
+2.  Simulated data
+a.  Create the data and .psmcfa files (simulate_data_basic.m, simulate_data_errors.m, or simulate_data_gene_conversion.m)
+b.  Run PSMC (command: psmc -N25 -t15 -r5 -p "4+25*2+4+6" -o [file].psmc [file].psmcfa)
+c.  Calibrate (calibrate_simulated_data.m)
+3.  Real data
+a.  Run PSMC (on full genomes; command same as above)
+b.  Read data (load_real_data.m or load_real_data_CpG.m)
+c.  Calibrate (calibrate_real_data_new.m)
+
+Additional documentation can be found as comments in the .m files.
+
+Please contact Mark Lipson (mark.lipson [at] gmail.com) with any questions.
