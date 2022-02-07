@@ -17,5 +17,3 @@ b.  Read data (load_real_data.m or load_real_data_CpG.m)
 c.  Calibrate (calibrate_real_data_new.m)
 
 Additional documentation can be found as comments in the .m files.
-
-Please contact Mark Lipson (mark.lipson [at] gmail.com) with any questions.
